@@ -1,0 +1,48 @@
+@import './base.scss';
+
+.about {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+.about__picture {
+   height: 20%;
+   display: flex;
+   justify-content: center;
+}
+.about__picture-img {
+   height: 223px;
+   border-radius: 20px;
+   object-fit: cover;
+   width: 89%;
+}
+
+.about__main {
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   gap: 20px;
+   width: 89%;
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+
+.about__main__collapse__text {
+   display: block;
+}
+
+.about__main__fiabilite {
+   width: 100%;
+}
+
+.about__main__collapse__respect {
+   width: 100%;
+}
+
+.about__main__service {
+   width: 100%;
+}
+
+.about__main__securite_text {
+   width: 100%;
+}

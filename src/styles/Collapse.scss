@@ -1,0 +1,102 @@
+@import './base.scss';
+
+.collapse {
+   width: 402px;
+   border-radius: 5px;
+}
+.collapse__header {
+   display: flex;
+   justify-content: space-between;
+   background-color: $color-primary;
+   border-radius: 5px;
+   color: $color-secondary;
+   padding-left: 1vw;
+   align-items: center;
+   height: 52px;
+   font-size: 1.25vw;
+}
+.collapse__header h2 {
+   font-weight: 500;
+}
+.collapse__header__logo {
+   width: 24px;
+   height: 13px;
+   align-self: center;
+   margin-right: 2vw;
+   cursor: pointer;
+}
+.collapse__txt {
+   color: $color-primary;
+   background-color: $color-collapse-txt-background;
+   border-radius: 0 0 5px 5px;
+   max-height: 0;
+   opacity: 0;
+   overflow: hidden;
+   transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.collapse__txt__div {
+   margin-left: 4%;
+   margin-right: 4%;
+   margin-top: 18px;
+   margin-bottom: 18px;
+}
+.collapse__txt__open {
+   max-height: 100%;
+   opacity: 1;
+}
+.collapse__txt__close {
+   max-height: 0;
+   opacity: 0;
+}
+
+@keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   50% {
+      transform: rotate(-85deg);
+   }
+   100% {
+      transform: rotate(-180deg);
+   }
+}
+.rotate {
+   animation: rotate 0.5s steps(4) forwards;
+   transform-origin: center;
+}
+
+@keyframes rotateReverse {
+   0% {
+      transform: rotate(-180deg);
+   }
+   50% {
+      transform: rotate(-85deg);
+   }
+   100% {
+      transform: rotate(0);
+   }
+}
+.rotateReverse {
+   animation: rotateReverse 0.5s steps(4) forwards;
+   transform-origin: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+   .collapse__header {
+      font-size: 13px;
+      height: 30px;
+   }
+   .collapse__header__logo {
+      height: 9.14px;
+      width: 16px;
+   }
+   .collapse__txt__div {
+      font-size: 12px;
+   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1020px) {
+   .collapse__header h2 {
+      font-size: 13px;
+   }
+}
